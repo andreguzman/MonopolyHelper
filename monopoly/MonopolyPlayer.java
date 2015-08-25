@@ -7,13 +7,19 @@ public class MonopolyPlayer {
 	private String name;
 	private int cash;
 	private Set<MonopolyProperty> properties;
-	
+
 	public MonopolyPlayer(String name) {
 		this.name = name;
 		cash = 2000;
 		properties = new HashSet<MonopolyProperty>();
 	}
-	
+
+	public MonopolyPlayer(String name, int startingCash, Set<MonopolyProperty> properties) {
+		this.name = name;
+		cash = startingCash;
+		properties = new HashSet<>(properties);
+	}
+
 	public String getName() {
 		return name;
 	}
